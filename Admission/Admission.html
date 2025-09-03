@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission - H.M. Education Centre</title>
+  <link rel="stylesheet" href="Admission.css">
+</head>
+<body>
+  <div class="admission-container">
+    <h2>Student Admission Form</h2>
+    <form id="admissionForm">
+      <input type="text" id="fullname" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <select id="course" required>
+        <option value="" disabled selected>Select Course</option>
+        <option value="nursery">Nursery</option>
+        <option value="kg">KG</option>
+        <option value="primary">Primary</option>
+      </select>
+      <textarea id="message" placeholder="Message (Optional)"></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stylesindex.css">
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <title>H. M. EDUCATION CENTRE</title>
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="Logo.png" alt="H. M. EDUCATION CENTRE Logo" class="logo">
+                <h1 class="school-title">H.M.EDUCATION CENTRE</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" aria-current="page">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="Admission/Admission.html">Admissions</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="main-content">
+            <section class="hero-section">
+                <div class="image-container">
+                    <img class="school-image active" src="Main photo 1.jpg" alt="School Building">
+                    <img class="school-image" src="Main photo 2.webp" alt="Students in Classroom">
+                </div>
+                <div class="hero-content">
+                    <h2>Welcome to H. M. EDUCATION CENTRE</h2>
+                    <p>Empowering minds, shaping futures</p>
+                    <div class="hero-buttons">
+                        <a href="Admission/Admission.html" class="hero-button apply-button">Apply Now!</a>
+                        <a href="Login Page/Login.html" class="hero-button login-button">Login</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="features-section">
+                <div class="feature">
+                    <h3>Quality Education</h3>
+                    <p>Providing top-notch education to shape future leaders</p>
+                </div>
+                <div class="feature">
+                    <h3>Experienced Faculty</h3>
+                    <p>Learn from the best in the field</p>
+                </div>
+                <div class="feature">
+                    <h3>Modern Facilities</h3>
+                    <p>State-of-the-art infrastructure for optimal learning</p>
+                </div>
+            </section>
+
+            <section id="enquiry-form" class="enquiry-section">
+                <h2>Enquire Now</h2>
+                <form class="enquiry-form">
+                    <label for="fullName" class="visually-hidden">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    
+                    <label for="email" class="visually-hidden">Email Address</label>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    
+                    <label for="phone" class="visually-hidden">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                    
+                    <label for="course" class="visually-hidden">Select Course</label>
+                    <select id="course" required>
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="course2">Nursery</option>
+                        <option value="course3"></option>
+                        <option value="course1"></option>
+                    </select>
+                    
+                    <label for="message" class="visually-hidden">Message (Optional)</label>
+                    <textarea id="message" placeholder="Message (Optional)"></textarea>
+                    
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-text">
+                        <p>Call us any time:</p>
+                        <p><a href="tel:+918777606414">+91 8777606414</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-text">
+                        <p>Email us 24/7 hours:</p>
+                        <p><a href="mailto:contact@hmeducationcentre.in">contact@hmeducationcentre.in</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-text">
+                        <p>Our School location:</p>
+                        <p>Hind Motor, Hooghly - 712233</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.school-image');
+            let currentImage = 0;
+            
+            function changeImage() {
+                images.forEach(img => img.classList.remove('active'));
+                images[currentImage].classList.add('active');
+                
+                currentImage = (currentImage + 1) % images.length;
+            }
+            
+            setInterval(changeImage, 5000);
+        });
+    </script>
+</body>
+</html>
